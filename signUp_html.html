@@ -3,16 +3,16 @@
 <head>
   <link rel="stylesheet" href="./css/login_css.css" type="text/css">
   <title>Sign Up</title>
-  <script type="type/javascript">
+  <script type="text/javascript">
   function tocheckpw() {
       var pw = document.getElementById("pw").value;
       var pwck = document.getElementById("chPw").value;
 
       if (pw != pwck) {
-        document.getElementById('pwSame').innerHTML = 'X';
+        document.getElementById("pwSame").innerHTML = 'Unmatched password';
       }
       else {
-        document.getElementById('pwSame').innerHTML = 'O';
+        document.getElementById("pwSame").innerHTML = '';
       }
   }
   </script>
@@ -35,7 +35,7 @@
                                   placeholder="Check PW"
                                   onblur="tocheckpw()"
                                   class="inputInfo"></div>
-          <p id="pwSame" style="color:red;"></p>
+          <p id="pwSame" style="display:inline; color:red; font-size:10pt"></p>
           <div><label for="email"><input type="text" name="email"
                                    placeholder="E-Mail"
                                    class="inputInfo"></div>
