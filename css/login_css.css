@@ -10,31 +10,34 @@
   display:inline-block;width:0;height:100%;vertical-align:middle
 }
 .logIn{
-    border-radius: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #4CAF50;
-    border: none;
-    color: #ffffff;
-    padding: 15px 60px;
-    text-align: center;
-    font-size: 30px;
+  border-color: black;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: White;
+  padding: 15px 60px;
+  text-align: center;
+  font-size: 30px;
 }
 .signUp{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #4CAF50;
-    border: none;
-    color: #ffffff;
+  border-color: black;
+  border-radius: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: White;
 }
 .inputInfo{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 300px;
-    height: 50px;
-    background: #4CAF50;
-    border: none;
-    font-size: 20pt;
-    color: #ffffff;
-    padding-left: 20px;
+  border-color: black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 50px;
+  background: White;
+  font-size: 20pt;
+  padding-left: 20px;
+}
+.main{
+  border-color: black;
+  background-color: Beige;
+  padding: 15px 60px;
 }
