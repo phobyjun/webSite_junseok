@@ -37,6 +37,7 @@
   padding-left: 20px;
 }
 .main{
+  border-radius: 8px;
   border-color: black;
   background-color: Beige;
   padding: 15px 60px;
