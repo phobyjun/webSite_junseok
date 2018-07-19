@@ -3,11 +3,24 @@
 <head>
   <link rel="stylesheet" href="./css/login_css.css" type="text/css">
   <title>Sign Up</title>
+  <script type="type/javascript">
+  function tocheckpw() {
+      var pw = document.getElementById("pw").value;
+      var pwck = document.getElementById("chPw").value;
+
+      if (pw != pwck) {
+        document.getElementById('pwSame').innerHTML = 'X';
+      }
+      else {
+        document.getElementById('pwSame').innerHTML = 'O';
+      }
+  }
+  </script>
 </head>
 <body>
   <div class="layer">
     <span class="content">
-      <form>
+      <form action="login_html.html">
         <div class="main">
           <div class="title">
             <h1>Sign Up</h1>
@@ -15,12 +28,14 @@
           <div><label for="id"><input type="text" name="id"
                                 placeholder="ID"
                                 class="inputInfo"></div>
-          <div><label for="pw"><input type="password" name="pw"
+          <div><label for="pw"><input type="password" id="pw"
                                 placeholder="PW"
                                 class="inputInfo"></div>
-          <div><label for="chPw"><input type="password" name="chPw"
+          <div><label for="chPw"><input type="password" id="chPw"
                                   placeholder="Check PW"
+                                  onblur="tocheckpw()"
                                   class="inputInfo"></div>
+          <p id="pwSame" style="color:red;"></p>
           <div><label for="email"><input type="text" name="email"
                                    placeholder="E-Mail"
                                    class="inputInfo"></div>
@@ -28,8 +43,7 @@
                                    placeholder="000-0000-0000"
                                    pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
                                    class="inputInfo"></div>
-          <button type="submit" class="logIn" value="Submit"
-                  onclick="location.href='login_html.html'">Sign up</button><br>
+          <button type="submit" class="signIn">Sign up</button><br>
         </div>
       </form>
     </span>

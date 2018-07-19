@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+@font-face{
+  font-family: 'NBGUL';
+  src: url(./fonts/NBGUL.ttf) format('truetype');
+}
+body{
+  font-family: NBGUL;
+}
 .layer{
   position:absolute;top:0;left:0;width:100%;height:100%;text-align:center
 }
@@ -9,7 +16,10 @@
 .layer .blank{
   display:inline-block;width:0;height:100%;vertical-align:middle
 }
-.logIn{
+body{
+  background-color: whitesmoke;
+}
+.signIn{
   border-color: black;
   border-radius: 8px;
   margin-top: 10px;
