@@ -4,15 +4,27 @@
   <link rel="stylesheet" href="./css/login_css.css" type="text/css">
   <title>Sign Up</title>
   <script type="text/javascript">
-  function tocheckpw() {
+  function checkInfo() {
+      var id = document.getElementById("id").value;
       var pw = document.getElementById("pw").value;
-      var pwck = document.getElementById("chPw").value;
+      var pwch = document.getElementById("chPw").value;
 
-      if (pw != pwck) {
-        document.getElementById("pwSame").innerHTML = 'Unmatched password';
+      if(id == ""){
+        alert("아이디를 입력하십시오!")
       }
-      else {
-        document.getElementById("pwSame").innerHTML = '';
+      else if (id == "junseok"){
+        alert("중복된 아이디입니다!")
+      }
+      else{
+        if(pw == ""){
+          alert("비밀번호를 입력하십시오!")
+        }
+        else if(pw != pwch){
+          alert("비밀번호가 다릅니다!")
+        }
+        else{
+          location.href="login_html.html";
+        }
       }
   }
   </script>
@@ -20,22 +32,20 @@
 <body>
   <div class="layer">
     <span class="content">
-      <form action="login_html.html">
+      <form method="POST" action="./apis/add_user.php">
         <div class="main">
           <div class="title">
             <h1>WELCOME!</h1>
           </div>
-          <div><label for="id"><input type="text" name="id"
+          <div><label for="id"><input type="text" name="id" id="id"
                                 placeholder="ID"
                                 class="inputInfo"></div>
-          <div><label for="pw"><input type="password" id="pw"
+          <div><label for="pw"><input type="password" name="pw" id="pw"
                                 placeholder="PW"
                                 class="inputInfo"></div>
           <div><label for="chPw"><input type="password" id="chPw"
                                   placeholder="Check PW"
-                                  onblur="tocheckpw()"
                                   class="inputInfo"></div>
-          <p id="pwSame" style="display:inline; color:red; font-size:10pt"></p>
           <div><label for="email"><input type="text" name="email"
                                    placeholder="example@example.com"
                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
@@ -44,7 +54,7 @@
                                    placeholder="000-0000-0000"
                                    pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
                                    class="inputInfo"></div>
-          <button type="submit" class="signIn">Sign up</button><br>
+          <button class="signIn">Sign up</button><br>
         </div>
       </form>
     </span>

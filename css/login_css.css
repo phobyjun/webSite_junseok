@@ -19,7 +19,7 @@ body{
   display:inline-block;width:0;height:100%;vertical-align:middle
 }
 .signIn{
-  border-color: black;
+  border: none;
   border-radius: 8px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -29,14 +29,15 @@ body{
   font-size: 30px;
 }
 .signUp{
-  border-color: black;
+  border: none;
   border-radius: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: gray;
 }
 .inputInfo{
-  border-color: black;
+  border: none;
+  border-radius: 16px;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 300px;

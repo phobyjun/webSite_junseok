@@ -3,31 +3,18 @@
 <head>
   <link rel="stylesheet" href="./css/login_css.css" type="text/css">
   <title>Login</title>
-  <script type="text/javascript">
-    function login(){
-      var id = document.getElementById("id").value;
-      var pw = document.getElementById("pw").value;
-
-      if (id == "yunjun2" && pw == "phobyjun"){
-        location.href = "Main_html.html";
-      }
-      else{
-        alert("회원이 아닙니다!");
-      }
-    }
-  </script>
 </head>
 <body>
   <div class="layer">
     <span class="content">
-      <form>
+      <form method="POST" action='./apis/login_check.php'>
         <div class="main">
           <div class="title">
             <h1>MY WEBSITE</h1>
           </div>
           <div><label for="id"><input type="text" id="id" name="id" placeholder="ID" class="inputInfo"></div>
           <div><label for="pw"><input type="password" id="pw" name="pw" placeholder="PW" class="inputInfo"></div>
-          <button onclick="login()" type="submit" class="signIn" value="Submit">Sign in</button><br>
+          <button class="signIn">Sign in</button><br>
           <button type="button" class="signUp" onclick="location.href='signUp_html.html'">Sign up</button>
         </div>
       </form>
