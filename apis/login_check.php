@@ -2,13 +2,14 @@
 $id=$_POST['id'];
 $pw=$_POST['pw'];
 
-$db = mysqli_connect('localhost', 'root', 'autoset', 'dasom');
+$db = mysqli_connect('localhost', 'root', 'autoset', 'user');
 if(mysqli_connect_errno()){
   echo "Failed to connect to MySQL: ".mysqli_connect_errno();
 }
+
 $pw_encode = md5($pw);
 $table_name = "user";
-$sql = "SELECT password FROM $table_name WHERE id='$id'";
+$sql = "SELECT pw FROM $table_name WHERE id='$id'";
 
 if($result = mysqli_query($db, $sql))
 {
@@ -20,7 +21,7 @@ if($result = mysqli_query($db, $sql))
   else
   {
       $row = mysqli_fetch_assoc($result);
-      if($row["password"] == $pw_encode) // 로그인 성공
+      if($row["pw"] == $pw_encode) // 로그인 성공
       {
         // 리디렉션
           echo "<script>alert('Login Succeed.');</script>";
