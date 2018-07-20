@@ -3,14 +3,12 @@ $id=$_POST['id'];
 $pw=$_POST['pw'];
 $email=$_POST['email'];
 $phone=$_POST['phone'];
-/*echo "아이디: ".$id."<br>";
-echo "비밀번호: ".$pw."<br>";
-echo "메일: ".$email."<br>";
-echo "전화번호: ".$phone;*/
+
 $db = mysqli_connect('localhost', 'root', 'autoset', 'dasom');
 if(mysqli_connect_errno()){
   echo "Failed to connect to MySQL: ".mysqli_connect_errno();
 }
+
 $pw_encode = md5($pw);
 $table_name = "user";
 $sql = "INSERT INTO $table_name (`id`, `password`, `email`, `phoneNumber`) VALUES ('$id', '$pw_encode', '$email', '$phone')";
